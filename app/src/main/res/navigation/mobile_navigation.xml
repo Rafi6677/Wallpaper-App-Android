@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_photos"
-        android:name="com.example.wallpaperapp.ui.photos.PhotosFragment"
+        android:name="com.example.wallpaperapp.fragments.PhotosFragment"
         android:label="@string/menu_photos"
         tools:layout="@layout/fragment_photos">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="com.example.wallpaperapp.ui.collections.HomeSecondFragment"
+        android:name="com.example.wallpaperapp.fragments.collections.HomeSecondFragment"
         android:label="@string/home_second"
         tools:layout="@layout/fragment_home_second">
         <action
@@ -31,13 +31,13 @@
 
     <fragment
         android:id="@+id/nav_collections"
-        android:name="com.example.wallpaperapp.ui.collections.CollectionsFragment"
+        android:name="com.example.wallpaperapp.fragments.CollectionsFragment"
         android:label="@string/menu_collections"
         tools:layout="@layout/fragment_collections" />
 
     <fragment
         android:id="@+id/nav_favorites"
-        android:name="com.example.wallpaperapp.ui.favorites.FavoritesFragment"
+        android:name="com.example.wallpaperapp.fragments.FavoritesFragment"
         android:label="@string/menu_favorites"
         tools:layout="@layout/fragment_favorites" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.wallpaperapp.ui.favorites;
+package com.example.wallpaperapp.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,21 +13,22 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.wallpaperapp.R;
+import com.example.wallpaperapp.viewmodels.CollectionsViewModel;
 
-public class FavoritesFragment extends Fragment {
+public class CollectionsFragment extends Fragment {
 
-    private FavoritesViewModel favoritesViewModel;
+    private CollectionsViewModel collectionsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        favoritesViewModel = ViewModelProviders.of(this).get(FavoritesViewModel.class);
+        collectionsViewModel = ViewModelProviders.of(this).get(CollectionsViewModel.class);
 
-        View root = inflater.inflate(R.layout.fragment_favorites, container, false);
+        View root = inflater.inflate(R.layout.fragment_collections, container, false);
 
-        final TextView textView = root.findViewById(R.id.text_favorites);
+        final TextView textView = root.findViewById(R.id.text_home);
 
-        favoritesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        collectionsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

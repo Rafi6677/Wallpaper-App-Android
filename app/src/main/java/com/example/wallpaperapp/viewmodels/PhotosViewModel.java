@@ -1,16 +1,16 @@
-package com.example.wallpaperapp.ui.collections;
+package com.example.wallpaperapp.viewmodels;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class CollectionsViewModel extends ViewModel {
+public class PhotosViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public CollectionsViewModel() {
+    public PhotosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is collections fragment");
+        mText.setValue("This is photos fragment");
     }
 
     public LiveData<String> getText() {

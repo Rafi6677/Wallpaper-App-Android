@@ -1,4 +1,4 @@
-package com.example.wallpaperapp.ui.favorites;
+package com.example.wallpaperapp.viewmodels;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -1,4 +1,4 @@
-package com.example.wallpaperapp.ui.collections;
+package com.example.wallpaperapp.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,21 +13,22 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.wallpaperapp.R;
+import com.example.wallpaperapp.viewmodels.PhotosViewModel;
 
-public class CollectionsFragment extends Fragment {
+public class PhotosFragment extends Fragment {
 
-    private CollectionsViewModel collectionsViewModel;
+    private PhotosViewModel photosViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        collectionsViewModel = ViewModelProviders.of(this).get(CollectionsViewModel.class);
+        photosViewModel = ViewModelProviders.of(this).get(PhotosViewModel.class);
 
-        View root = inflater.inflate(R.layout.fragment_collections, container, false);
+        View root = inflater.inflate(R.layout.fragment_photos, container, false);
 
-        final TextView textView = root.findViewById(R.id.text_home);
+        final TextView textView = root.findViewById(R.id.text_collections);
 
-        collectionsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        photosViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
