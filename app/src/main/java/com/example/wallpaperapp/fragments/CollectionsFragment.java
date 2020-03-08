@@ -22,19 +22,9 @@ public class CollectionsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        collectionsViewModel = ViewModelProviders.of(this).get(CollectionsViewModel.class);
+        View view = inflater.inflate(R.layout.fragment_collections, container, false);
 
-        View root = inflater.inflate(R.layout.fragment_collections, container, false);
 
-        final TextView textView = root.findViewById(R.id.text_home);
-
-        collectionsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-
-        return root;
+        return view;
     }
 }
