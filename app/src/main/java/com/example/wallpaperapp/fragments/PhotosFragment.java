@@ -26,12 +26,12 @@ public class PhotosFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_photos, container, false);
 
-        final TextView textView = root.findViewById(R.id.text_collections);
+        //final TextView textView = root.findViewById(R.id.text_collections);
 
         photosViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+                //textView.setText(s);
             }
         });
 
