@@ -26,7 +26,6 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
     private List<Photo> photos;
 
     public PhotosAdapter(Context context, List<Photo> photos) {
-
         this.context = context;
         this.photos = photos;
     }
@@ -62,7 +61,6 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-
         return photos.size();
     }
 
